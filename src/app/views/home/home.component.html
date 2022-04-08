@@ -1,13 +1,19 @@
-<form #userForm="ngForm" (ngSubmit)="onSubmit()">
-  <label for="email">Email: </label>
-  <input type="email" id="email" name="email" [(ngModel)]="userModel.email" />
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+  <div class="login">Login</div>
+  <div class="email">
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" [(ngModel)]="userModel.email" />
+  </div>
 
-  <label for="senha">Senha: </label>
-  <input
-    type="password"
-    id="senha"
-    name="senha"
-    [(ngModel)]="userModel.senha"
-  />
+  <div class="senha">
+    <label for="senha">Senha: </label>
+    <input
+      type="password"
+      id="senha"
+      name="senha"
+      [(ngModel)]="userModel.senha"
+    />
+  </div>
+  <div><input type="checkbox" name="" id="" />Aceito todos os termos.</div>
   <button type="submit">Enviar</button>
 </form>
